@@ -1,0 +1,22 @@
+<template>
+<ul>
+  <li>{{ person.prenom }}</li>
+  <li>{{ person.nom }}</li>
+  <li>{{ person.age }}</li>
+</ul>
+<button @click="updateOld">Modifier age</button>
+</template>
+
+<script setup>
+import {ref} from "vue";
+const person = ref({
+  prenom: 'salah',
+  nom: 'mkharbech',
+  age: 45
+})
+
+const updateOld = () => {
+  person.value.age = Math.round(Math.random() * 100)
+}
+</script>
+
