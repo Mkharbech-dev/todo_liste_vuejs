@@ -1,4 +1,5 @@
 <template>
+  <div style="margin-bottom: 30px; text-align: center; font-size: xx-large;">Liste de Taches</div>
   <form action="" @submit.prevent="addTodo">
     <fieldset role="group">
     <input 
@@ -36,8 +37,8 @@
 import {ref} from "vue";
 
 const tacheFaite = ref(false)
-
-const todos = ref([{
+const todos = ref([])
+/*const todos = ref([{
   titre: 'tache à faire',
   completed: true,
   date: 1,
@@ -46,7 +47,7 @@ const todos = ref([{
   titre: 'tache de test',
   completed: false,
   date: 2,
-}])
+}])*/
 const newTodo =ref('')
 const addTodo = () => {
   todos.value.push({
